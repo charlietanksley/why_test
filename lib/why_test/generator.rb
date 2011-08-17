@@ -25,10 +25,11 @@ class Generator
   end
 
   def write_files(root_directory='.')
+    base_dir = File.expand_path root_directory
     template_directory = File.join(File.dirname(__FILE__), 'generators', @details[:framework])
 
-    system "mkdir -p #{root_directory}" unless File.exists?(root_directory)
-    Dir.chdir root_directory
+    system "mkdir -p #{base_dir}" unless File.exists?(base_dir)
+    Dir.chdir base_dir
     
     # Create the Rakefile
     rakefile_contents = File.open(File.join(template_directory, @details[:rakefile])) { |f| f.read }
