@@ -31,7 +31,7 @@ version WhyTest::VERSION
 #flag [:f,:flagname]
 
 desc 'Set up for testing with Riot'
-arg_name 'Describe arguments to rspec here'
+#arg_name 'Describe arguments to rspec here'
 command :riot do |c|
   #c.desc 'Describe a switch to rspec'
   #c.switch :s
@@ -44,16 +44,37 @@ command :riot do |c|
     g = Generator.new('riot')
     g.write_files(dir)
     g.info
-
-
     
-
     # Your command logic here
      
     # If you have any errors, just raise them
     # raise "that command made no sense"
   end
 end
+
+desc 'Set up for testing with Rspec'
+#arg_name 'Describe arguments to rspec here'
+command :rspec do |c|
+  #c.desc 'Describe a switch to rspec'
+  #c.switch :s
+
+  #c.desc 'Describe a flag to rspec'
+  #c.default_value 'default'
+  #c.flag :f
+  c.action do |global_options,options,args|
+    dir = Dir.pwd
+    g = Generator.new('rspec')
+    g.write_files(dir)
+    g.info
+    
+    # Your command logic here
+     
+    # If you have any errors, just raise them
+    # raise "that command made no sense"
+  end
+end
+
+
 
 pre do |global,command,options,args|
   # Pre logic here
