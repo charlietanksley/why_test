@@ -1,0 +1,6 @@
+= why_test
+
+https://github.com/padrino/padrino-framework/blob/master/padrino-admin/test/generators/test_admin_page_generator.rb
+
+:include:why_test.rdoc
+
