@@ -1,4 +1,9 @@
+require 'why_test/generator_information'
+
 class Generator
+  include GeneratorInformation
+
+  attr_reader :directory
 
   def initialize(framework)
     @details = create(framework)
@@ -27,6 +32,7 @@ class Generator
   def write_files(root_directory='.')
     base_dir = File.expand_path root_directory
     template_directory = File.join(File.dirname(__FILE__), 'generators', @details[:framework])
+    @directory = base_dir
 
     system "mkdir -p #{base_dir}" unless File.exists?(base_dir)
     Dir.chdir base_dir
@@ -49,5 +55,9 @@ class Generator
         f.write file_contents
       end
     end
+  end
+
+  def info
+    puts send(@details[:framework].to_sym) 
   end
 end

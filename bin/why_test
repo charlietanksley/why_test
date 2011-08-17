@@ -14,31 +14,39 @@ $: << File.expand_path(File.dirname(File.realpath(__FILE__)) + '/../lib')
 require 'rubygems'
 require 'gli'
 require 'why_test_version'
+require 'why_test'
 
 include GLI
 
-program_desc 'Describe your application here'
+program_desc 'Generate test setup files and rake tasks'
 
 version WhyTest::VERSION
 
-desc 'Describe some switch here'
-switch [:s,:switch]
+#desc 'Describe some switch here'
+#switch [:s,:switch]
 
-desc 'Describe some flag here'
-default_value 'the default'
-arg_name 'The name of the argument'
-flag [:f,:flagname]
+#desc 'Describe some flag here'
+#default_value 'the default'
+#arg_name 'The name of the argument'
+#flag [:f,:flagname]
 
-desc 'Describe rspec here'
+desc 'Set up for testing with Riot'
 arg_name 'Describe arguments to rspec here'
-command :rspec do |c|
-  c.desc 'Describe a switch to rspec'
-  c.switch :s
+command :riot do |c|
+  #c.desc 'Describe a switch to rspec'
+  #c.switch :s
 
-  c.desc 'Describe a flag to rspec'
-  c.default_value 'default'
-  c.flag :f
+  #c.desc 'Describe a flag to rspec'
+  #c.default_value 'default'
+  #c.flag :f
   c.action do |global_options,options,args|
+    dir = Dir.pwd
+    g = Generator.new('riot')
+    g.write_files(dir)
+    g.info
+
+
+    
 
     # Your command logic here
      

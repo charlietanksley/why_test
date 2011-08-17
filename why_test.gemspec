@@ -3,11 +3,11 @@ require File.join([File.dirname(__FILE__),'lib','why_test_version.rb'])
 spec = Gem::Specification.new do |s| 
   s.name = 'why_test'
   s.version = WhyTest::VERSION
-  s.author = 'Your Name Here'
-  s.email = 'your@email.address.com'
-  s.homepage = 'http://your.website.com'
+  s.author = 'Charlie Tanksley'
+  s.email = 'charlie.tanksley@gmail.com'
+  s.homepage = 'http://github.com/charlietanksley/why_test'
   s.platform = Gem::Platform::RUBY
-  s.summary = 'A description of your project'
+  s.summary = 'Test setup generation'
 # Add your other files here if you make them
   s.files = %w(
 bin/why_test
@@ -20,4 +20,5 @@ bin/why_test
   s.executables << 'why_test'
   s.add_development_dependency('rake')
   s.add_development_dependency('rdoc')
+  s.add_dependency('gli')
 end
