@@ -11,7 +11,8 @@
 * Micronaut (negative: it adds some to rspec, but looks mostly like an 
   rspec clone)
 * Zebra (one-line tests without extra 'comments'; problem: last updated 
-  2009?)
+  2009?; second problem: depends on gems that don't exit or don't work 
+  with 1.9.2.)
 * https://github.com/rubyworks/microtest
 * https://github.com/rubyworks/lime
 * https://github.com/rubyworks/citron
