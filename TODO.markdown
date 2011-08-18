@@ -12,6 +12,10 @@
   rspec clone)
 * Zebra (one-line tests without extra 'comments'; problem: last updated 
   2009?)
+* https://github.com/rubyworks/microtest
+* https://github.com/rubyworks/lime
+* https://github.com/rubyworks/citron
+
 
 ## Done
 
