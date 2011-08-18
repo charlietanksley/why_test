@@ -1,7 +1,4 @@
-require 'why_test/generator_information'
-
 class Generator
-  include GeneratorInformation
 
   attr_reader :directory
 
@@ -55,9 +52,5 @@ class Generator
         f.write file_contents
       end
     end
-  end
-
-  def info
-    puts send(@details[:framework].to_sym) 
   end
 end

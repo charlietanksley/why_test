@@ -43,7 +43,6 @@ command :riot do |c|
     dir = Dir.pwd
     g = Generator.new('riot')
     g.write_files(dir)
-    g.info
     
     # Your command logic here
      
@@ -59,7 +58,6 @@ command :rspec do |c|
     dir = Dir.pwd
     g = Generator.new('rspec')
     g.write_files(dir)
-    g.info
   end
 end
 
