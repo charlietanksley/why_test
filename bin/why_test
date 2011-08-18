@@ -55,22 +55,20 @@ end
 desc 'BDD for Ruby'
 #arg_name 'Describe arguments to rspec here'
 command :rspec do |c|
-  #c.desc 'Describe a switch to rspec'
-  #c.switch :s
-
-  #c.desc 'Describe a flag to rspec'
-  #c.default_value 'default'
-  #c.flag :f
   c.action do |global_options,options,args|
     dir = Dir.pwd
     g = Generator.new('rspec')
     g.write_files(dir)
     g.info
-    
-    # Your command logic here
-     
-    # If you have any errors, just raise them
-    # raise "that command made no sense"
+  end
+end
+
+desc 'Work with your tests, not against them'
+command :shindo do |c|
+  c.action do |global_options,options,args|
+    dir = Dir.pwd
+    g = Generator.new('shindo')
+    g.write_files(dir)
   end
 end
 

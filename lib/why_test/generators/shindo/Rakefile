@@ -1,0 +1,13 @@
+require 'rake/testtask'
+
+desc "Run all our tests"
+task :test do
+  system "shindont"
+end
+
+desc "Run tests in interactive mode"
+task :testi do
+  system "shindo"
+end
+
+task :default => :test
