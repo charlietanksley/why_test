@@ -70,6 +70,16 @@ command :shindo do |c|
   end
 end
 
+desc 'Super simple Ruby testing library'
+command :testrocket do |c|
+  c.action do |global_options,options,args|
+    dir = Dir.pwd
+    g = Generator.new('testrocket')
+    g.write_files(dir)
+  end
+end
+
+
 
 
 pre do |global,command,options,args|
