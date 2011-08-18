@@ -30,7 +30,7 @@ version WhyTest::VERSION
 #arg_name 'The name of the argument'
 #flag [:f,:flagname]
 
-desc 'Set up for testing with Riot'
+desc 'An extremely fast, expressive, and context-driven unit-testing framework. Protest the slow test.'
 #arg_name 'Describe arguments to rspec here'
 command :riot do |c|
   #c.desc 'Describe a switch to rspec'
@@ -52,7 +52,7 @@ command :riot do |c|
   end
 end
 
-desc 'Set up for testing with Rspec'
+desc 'BDD for Ruby'
 #arg_name 'Describe arguments to rspec here'
 command :rspec do |c|
   #c.desc 'Describe a switch to rspec'
