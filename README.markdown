@@ -1,4 +1,10 @@
+[![Build Status](https://secure.travis-ci.org/[charlietanksley]/[why_test].png)](https://secure.travis-ci.org/[charlietanksley]/[why_test].png)
+
+
+
 # Why_test
+
+
 
 Perhaps my least favorite part of setting up a new project is getting 
 the tests set up.  I start projects infrequently enough (and play with 
