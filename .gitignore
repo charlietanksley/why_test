@@ -1,4 +1,11 @@
-.rvmrc
 test/tmp/
 tmp/
+pkg/*
+
+.bundle
+.rvmrc
 .DS_Store
+Gemfile.lock
+
+*.rbc
+*.gem

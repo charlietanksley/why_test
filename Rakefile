@@ -1,21 +1,7 @@
-require 'rake/clean'
-require 'rubygems'
-require 'rubygems/package_task'
-require 'rdoc/task'
+require 'bundler/gem_tasks'
 require 'rake/testtask'
 
-#Rake::RDocTask.new do |rd|
-#  rd.main = "README.rdoc"
-#  rd.rdoc_files.include("README.rdoc","lib/**/*.rb","bin/**/*")
-#  rd.title = 'Your application title'
-#end
-#
-#spec = eval(File.read('why_test.gemspec'))
-
-#Rake::GemPackageTask.new(spec) do |pkg|
-#end
-
-desc "Run all our tests"
+desc "Run all tests"
 task :test do
 Rake::TestTask.new do |t|
   t.libs << "test"

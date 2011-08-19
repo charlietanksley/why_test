@@ -13,7 +13,7 @@ end
 $: << File.expand_path(File.dirname(File.realpath(__FILE__)) + '/../lib')
 require 'rubygems'
 require 'gli'
-require 'why_test_version'
+#require 'version'
 require 'why_test'
 
 include GLI

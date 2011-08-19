@@ -1,8 +1,4 @@
-source :rubygems
+source "http://rubygems.org"
+
+# Specify your gem's dependencies in why_test.gemspec
 gemspec
-group :development do
-  gem 'riot'
-  gem 'rspec'
-  gem 'shindo'
-  gem 'testrocket'
-end
