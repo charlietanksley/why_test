@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/[charlietanksley]/[why_test].png)](https://secure.travis-ci.org/[charlietanksley]/[why_test].png)
+[![Build Status](https://secure.travis-ci.org/charlietanksley/why_test.png)](https://secure.travis-ci.org/charlietanksley/why_test.png)
 
 
 
