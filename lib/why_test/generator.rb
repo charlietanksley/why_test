@@ -32,29 +32,39 @@ class Generator
   # directory)
   def write_files(root_directory='.')
     base_dir = File.expand_path root_directory
-    template_directory = File.join(File.dirname(__FILE__), 'generators', @details[:framework])
-    @directory = base_dir
+    @template_directory = File.join(File.dirname(__FILE__), 'generators', @details[:framework])
 
     system "mkdir -p #{base_dir}" unless File.exists?(base_dir)
     Dir.chdir base_dir
-    
-    # Create the Rakefile
-    rakefile_contents = File.open(File.join(template_directory, @details[:rakefile])) { |f| f.read }
+
+    create_rakefile
+    create_directories
+    write_test_files
+  end
+
+
+  private
+
+  def create_rakefile
+    rakefile_contents = File.open(File.join(@template_directory, @details[:rakefile])) { |f| f.read }
     File.open('Rakefile', 'a') do |f|
       f.write rakefile_contents
     end
+  end
 
-    # Create the directories
+  def create_directories
     @details[:directories].each do |d|
       system "mkdir -p #{d}"
     end
+  end
 
-    # Write the test bits
+  def write_test_files
     @details[:files].each do |f|
-      file_contents = File.open(File.join(template_directory, f)) { |c| c.read }
+      file_contents = File.open(File.join(@template_directory, f)) { |c| c.read }
       File.open(f, 'w') do |f|
         f.write file_contents
       end
     end
   end
+
 end
