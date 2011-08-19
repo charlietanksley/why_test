@@ -26,6 +26,10 @@ class Generator
     results
   end
 
+  # Write the files.
+  #
+  # @param [String] the name of a root directory (default is current
+  # directory)
   def write_files(root_directory='.')
     base_dir = File.expand_path root_directory
     template_directory = File.join(File.dirname(__FILE__), 'generators', @details[:framework])
