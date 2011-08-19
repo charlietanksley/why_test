@@ -51,7 +51,7 @@ command :riot do |c|
   end
 end
 
-desc 'BDD for Ruby'
+desc 'BDD for Ruby.'
 #arg_name 'Describe arguments to rspec here'
 command :rspec do |c|
   c.action do |global_options,options,args|
@@ -61,7 +61,7 @@ command :rspec do |c|
   end
 end
 
-desc 'Work with your tests, not against them'
+desc 'Work with your tests, not against them.'
 command :shindo do |c|
   c.action do |global_options,options,args|
     dir = Dir.pwd
@@ -70,7 +70,7 @@ command :shindo do |c|
   end
 end
 
-desc 'Super simple Ruby testing library'
+desc 'Super simple Ruby testing library.'
 command :testrocket do |c|
   c.action do |global_options,options,args|
     dir = Dir.pwd
