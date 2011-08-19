@@ -1,3 +1,10 @@
+# To do
+
+* Add better tests (find a way to test the generated code).
+* Add more frameworks.
+* Consider adding some switches (like --no-sample for no sample code, or 
+  --one for Ruby 1.8 (v. 1.9)).
+ 
 # So many frameworks!
 
 ## For sure
